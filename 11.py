@@ -7,14 +7,14 @@ check = False
 a=input()
 c=len(a.replace(' ',''))
 while(a != 'end' ):
-    if(i<=c):
+    if(i<=c and len(a.split())==c):
         i+=1
-        b.append(a.split(' '))
+        b.append(a.split())
         a = input()
         check = True
     else:
         chek =False
-        print('ssss')
+        print('Матрица не квадратная ')
         break
 if(check):
     p1 = float(0)
