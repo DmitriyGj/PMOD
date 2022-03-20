@@ -5,7 +5,7 @@ a =''
 i=1
 check = False
 a=input()
-c=len(a.replace(' ',''))
+c=len(a.split())
 while(a != 'end' ):
     if(i<=c and len(a.split())==c):
         i+=1
@@ -20,9 +20,9 @@ if(check):
     p1 = float(0)
     for i in range(0,len(b)):
         for j in range(0,len(b)):
-            p1+=float(b[i][j])*float(b[i][j])       
+            p1+=float(b[i][j])**2       
     print('p1 =',math.sqrt(p1))
-    p2 = float()
+    p2 = float(0)
     for i in range(0,len(b)):        
         mblarge = 0
         for j in range(0,len(b)):

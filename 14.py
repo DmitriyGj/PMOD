@@ -1,15 +1,8 @@
-string =input()
-while string[len(string)-1]==' ':
-    string=string[:-1]
-while string[0]==' ':
-    string=string[1:]
-i=0
-while i < len(string)-1:
-    if string[i]==string[i+1]==' ':
-        string = string[:i]+string[i+2:]
-        i+=1
+string =input().split()
+for i in range(0,len(string)):
+    if i != len(string)-1:
+        print(string[i],end =' ')
     else:
-        i+=1
-print(string)
+        print(string[i])
     
         

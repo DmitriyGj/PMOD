@@ -1,7 +1,18 @@
-import numpy as np
+def  EvDist(a,b):
+    result =0.0
+    for i in range(0,len(a)):
+        result+=(a[i]-b[i])**2
+    result=result**(1/2)
+    return result
 
-a = np.array(list(int(i) for i in input('Введите вектор А ').split()))
-b = np.array(list(int(i) for i in input('Введите ветор В ').split()))
-
-s=np.linalg.norm(a-b)
-print(s)
+n = input('Введите N = ')
+a = list(int(i) for i in input("Введите вектор A \n").split())
+print(len(a))
+if(len(a) != int(n)):
+    print('Error')
+else:
+    b=list(int(i) for i in input('Введите вектор B \n').split())
+    if(len(b)!=len(a)):
+        print('Error')
+    else:
+        print(EvDist(a, b))
